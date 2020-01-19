@@ -6,3 +6,7 @@ body,
   margin: 0;
   padding: 0;
 }
+/* 解决表格表头对齐问题 */
+body .el-table th.gutter {
+  display: table-cell !important;
+}

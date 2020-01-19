@@ -64,7 +64,7 @@ export default {
     // 获取菜单数据
     async getMenuList() {
       const { data: res } = await this.$http.get('menus')
-      console.log(res)
+      // console.log(res)
       this.menuList = res.data
     },
     // 当点击折叠按钮时
