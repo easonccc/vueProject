@@ -12,6 +12,12 @@ import './assets/css/global.css'
 import axios from 'axios'
 // 配置请求的默认地址
 axios.defaults.baseURL = 'http://127.0.1:8888/api/private/v1/'
+// 在axios挂载在vue全局对象上之前 设置拦截器 将请求拦截 设置请求头
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  // 最后必须return config
+  return config
+})
 
 // 将axios挂载在vue全局对象上
 Vue.prototype.$http = axios
