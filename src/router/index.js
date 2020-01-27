@@ -8,7 +8,10 @@ import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
 // 引入用户列表页面
 import Users from '../components/Users.vue'
-
+// 引入用户角色页面
+import Roles from '../components/role/Roles.vue'
+// 引入用户权限页面
+import Rights from '../components/role/Rights.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,7 +26,9 @@ const routes = [
     redirect: '/welcome',
     children: [
       { path: '/welcome', component: Welcome },
-      { path: '/users', component: Users }
+      { path: '/users', component: Users },
+      { path: '/rights', component: Rights },
+      { path: '/roles', component: Roles }
     ]
   }
 ]
